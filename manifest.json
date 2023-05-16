@@ -1,18 +1,21 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "VDC Statistic Blocker",
-    "version": "2",
+    "version": "1",
     "description": "Toggle certain statistics from view on Voices.com",
     "permissions": [
-      "activeTab"
+      "storage"
+    ],
+    "host_permissions": [
+      "https://www.voices.com/*"
     ],
     "content_scripts": [
       {
-        "matches": ["http://voices.com/*", "https://voices.com/*"],
+        "matches": ["*://*/*"],
         "js": ["content.js"]
       }
     ],
-    "browser_action": {
+    "action": {
       "default_title": "Element Hider",
       "default_popup": "popup.html"
     },

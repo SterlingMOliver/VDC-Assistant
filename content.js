@@ -4,10 +4,18 @@ function toggleSelectedElements(selectedElements) {
     elements.forEach(element => {
       const title = element.querySelector('.stat-title').textContent; // Get the text content of the 'stat-title' element
       if (selectedElements.includes(title)) {
-        element.style.display = ''; // Show the element
-      } else {
         element.style.display = 'none'; // Hide the element
+      } else {
+        element.style.display = ''; // Show the element
       }
+    });
+  }
+  
+  // Function to load the selected elements from storage and apply them
+  function loadSelectedElementsAndApply() {
+    chrome.storage.sync.get({ selectedElements: [] }, function (data) {
+      const selectedElements = data.selectedElements;
+      toggleSelectedElements(selectedElements);
     });
   }
   
@@ -17,3 +25,7 @@ function toggleSelectedElements(selectedElements) {
       toggleSelectedElements(request.selectedElements);
     }
   });
+  
+  // Load the selected elements and apply them when the page is loaded
+  loadSelectedElementsAndApply();
+  
