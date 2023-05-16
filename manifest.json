@@ -7,7 +7,7 @@
       "storage"
     ],
     "host_permissions": [
-      "https://www.voices.com/*"
+      "*://www.voices.com/*"
     ],
     "content_scripts": [
       {
