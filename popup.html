@@ -2,48 +2,72 @@
 <html>
   <head>
     <script src="popup.js"></script>
+    <style>
+        .checkbox-flexbox {
+          display: flex;
+          flex-wrap: wrap; /* Wrap the checkboxes to multiple lines if necessary */
+        }
+  
+        .checkbox-flexbox label {
+          display: flex;
+          align-items: center;
+          margin-right: 20px; /* Adjust the spacing between checkboxes */
+        }
+  
+        .checkbox-flexbox input[type="checkbox"] {
+          margin-right: 5px; /* Adjust the spacing between the checkbox and label text */
+        }
+      </style>
   </head>
   <body>
-    <label>
+    <fieldset>
+          <legend>This option hides Shortlist from the main page</legend>
+        <label>
         <input type="checkbox" name="element" value="shortlist-section">
         Shortlist Section
-      </label>
-    <label>
+        </label>
+    </fieldset>
+    <fieldset>
+          <legend>These options hide statistics from the voices.com/talent/statics page</legend>
+        <div class="checkbox-flexbox">
+        <label>
         <input type="checkbox" name="element" value="Demo Listens">
         Demo Listens
-    </label>
-    <label>
+        </label>
+        <label>
         <input type="checkbox" name="element" value="Demo Favorites">
         Demo Favorites
-    </label>
-    <label>
+        </label>
+        <label>
         <input type="checkbox" name="element" value="Audition Listens">
         Audition Listens
-    </label>
-    <label>
+        </label>
+        <label>
         <input type="checkbox" name="element" value="Invitations Received">
         Invitations Received
-    </label>
-    <label>
+        </label>
+        <label>
         <input type="checkbox" name="element" value="Auditions Submitted">
         Auditions Submitted
-    </label>
-    <label>
+        </label>
+        <label>
         <input type="checkbox" name="element" value="Auditions Shortlisted">
         Auditions Shortlisted
-    </label>
-    <label>
+        </label>
+        <label>
         <input type="checkbox" name="element" value="Hired Jobs">
         Hired Jobs
-    </label>
-    <label>
+        </label>
+        <label>
         <input type="checkbox" name="element" value="Booking Ratio">
         Booking Ratio
-    </label>
-    <label>
+        </label>
+        <label>
         <input type="checkbox" name="element" value="Avg. Earnings per Job">
         Avg. Earnings per Job
-    </label>
+        </label>
+        </div>
+    </fieldset>
     <button id="applyButton">Apply</button>
   </body>
 </html>

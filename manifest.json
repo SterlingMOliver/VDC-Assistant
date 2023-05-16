@@ -4,7 +4,8 @@
     "version": "1",
     "description": "Toggle certain statistics from view on Voices.com",
     "permissions": [
-      "storage"
+      "storage",
+      "tabs"
     ],
     "host_permissions": [
       "*://www.voices.com/*"
@@ -16,7 +17,7 @@
       }
     ],
     "action": {
-      "default_title": "Element Hider",
+      "default_title": "VDC Statistic Blocker",
       "default_popup": "popup.html"
     },
     "icons": {
