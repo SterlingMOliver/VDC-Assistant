@@ -1,8 +1,12 @@
 // Function to toggle the visibility of the selected elements
 function toggleSelectedElements(selectedElements) {
-    const elements = document.querySelectorAll('.stat-column'); // Select all the elements with class 'stat-column'
+    const elements = document.querySelectorAll('.stat-column, #shortlist-section');
+    // Select all elements with class 'stat-column' and the element with ID 'shortlist-section'
+  
     elements.forEach(element => {
-      const title = element.querySelector('.stat-title').textContent; // Get the text content of the 'stat-title' element
+      const title = element.querySelector('.stat-title').textContent;
+      // Get the text content of the 'stat-title' element
+  
       if (selectedElements.includes(title)) {
         element.style.display = 'none'; // Hide the element
       } else {
