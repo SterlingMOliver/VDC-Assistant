@@ -1,28 +1,33 @@
 {
-    "manifest_version": 3,
-    "name": "VDC Statistic Blocker",
-    "version": "1",
-    "description": "Toggle certain statistics from view on Voices.com",
-    "permissions": [
-      "storage",
-      "tabs"
-    ],
-    "host_permissions": [
-      "*://www.voices.com/*"
-    ],
-    "content_scripts": [
-      {
-        "matches": ["*://*/*"],
-        "js": ["content.js"]
-      }
-    ],
-    "action": {
-      "default_title": "VDC Statistic Blocker",
-      "default_popup": "popup.html"
-    },
-    "icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
+  "manifest_version": 3,
+  "name": "VDC Statistic Blocker",
+  "version": "1",
+  "description": "Toggle certain statistics from view on Voices.com",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "VDC Statistic Blocker",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
     }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   }
+}
