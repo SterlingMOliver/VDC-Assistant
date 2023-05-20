@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "VDC Statistic Blocker",
+  "name": "VDC Assistant",
   "version": "1",
-  "description": "Toggle certain statistics from view on Voices.com",
+  "description": "A few improvements & changes to the VDC user experience",
   "permissions": [
     "storage",
     "tabs",
